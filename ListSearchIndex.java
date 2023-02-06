@@ -6,6 +6,9 @@ public class ListSearchIndex {
         if (value == null || list == null) {
             return null;
         }
+        if (list.indexOf(value) < 0) {
+            return 0;
+        }
         return list.lastIndexOf(value);
     }
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
