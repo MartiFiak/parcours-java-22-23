@@ -2,13 +2,13 @@ public class Chifoumi {
     public static ChifoumiAction getActionBeatenBy(ChifoumiAction chifoumiAction) {
         switch(chifoumiAction) {
 
-            case ROCK:
+            case SCISSOR:
             return ChifoumiAction.PAPER;
 
-            case PAPER:
+            case ROCK:
             return ChifoumiAction.SCISSOR;
 
-            case SCISSOR:
+            case PAPER:
             return ChifoumiAction.ROCK;
 
             default:
