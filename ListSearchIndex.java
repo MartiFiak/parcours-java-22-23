@@ -15,6 +15,9 @@ public class ListSearchIndex {
         if (value == null || list == null) {
             return null;
         }
+        if (list.indexOf(value) < 0) {
+            return null;
+        }
         return list.indexOf(value);
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
