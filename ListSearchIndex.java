@@ -25,6 +25,6 @@ public class ListSearchIndex {
                 newlist.add(i);
             }
         }
-        return newlist
+        return newlist;
     }
 }
