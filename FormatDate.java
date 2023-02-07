@@ -25,6 +25,10 @@ public class FormatDate {
         if (time == null) {
             return null;
         }
+        if (time.getNano() == 0) {
+            String t = time.format(DateTimeFormatter.ofPattern("HH:mm:ss,"));
+            return t;
+        }
         String t = time.format(DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS"));
         return t;
     }
