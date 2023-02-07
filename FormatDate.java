@@ -25,7 +25,7 @@ public class FormatDate {
         if (time == null) {
             return null;
         }
-        String t = time.format(DateTimeFormatter.ofPattern("HH:mm:ss:SSSSSSSSS"));
+        String t = time.format(DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS"));
         return t;
     }
 
