@@ -26,7 +26,13 @@ public class ParseDate {
         if (stringDate == null) {
             return null;
         }
-        LocalTime localTime = LocalTime.parse(stringDate, DateTimeFormatter.ofPattern("HH 'heures du soir,' mm 'minutes et' ss 'secondes'", Locale.forLanguageTag("fr")));
-        return localTime;
+        String[] parts = stringDate.split(" ");
+        int h = Integer.parseInt(parts[0]);
+        if (!stringDate.contains("matin")) {
+            h += 12;
+        }
+        int m = Integer.parseInt(parts[4]);
+        int s = Integer.parseInt(parts[7]);
+        return LocalTime.of(h, m, s);
     }
 }
