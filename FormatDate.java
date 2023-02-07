@@ -10,7 +10,7 @@ public class FormatDate {
         if (dateTime == null) {
             return null;
         }
-        String dT = dateTime.format(DateTimeFormatter.ofPattern("'Le' dd MMMM 'de l'\'an' yyyy 'à' HH'h'mm'm' 'et' ss's'", Locale.forLanguageTag("fr")));
+        String dT = dateTime.format(DateTimeFormatter.ofPattern("'Le' dd MMM 'de l'\'an' yyyy 'à' HH'h'mm'm' 'et' ss's'", Locale.forLanguageTag("fr")));
         return dT;
     }
 
