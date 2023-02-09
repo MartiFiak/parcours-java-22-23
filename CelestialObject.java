@@ -2,7 +2,7 @@ public class CelestialObject {
     
     @Override
     public String toString() {
-        return "Terre is positioned at (1.000, 2.000, 2.000)";
+        return getName() + "s positioned at (" + String.format("%.3f", getX()) + "," + String.format("%.3f", getY()) + "," + String.format("%.3f", getZ()) +")";
     }
 
     @Override
