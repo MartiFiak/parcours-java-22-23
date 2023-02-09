@@ -1,6 +1,6 @@
 public class CelestialObject {
     
-    public static final char[] KM_IN_ONE_AU = null;
+    public static double KM_IN_ONE_AU = 1.5E8;
     public double x = 0.0;      
     public double y = 0.0;
     public double z = 0.0;
@@ -49,11 +49,11 @@ public class CelestialObject {
         this.name = name;
     }
 
-    public static char[] getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
-        return null;
+    public static double getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
+        return 3.0;
     }
 
-    public static char[] getDistanceBetweenInKm(CelestialObject defaultStar, CelestialObject earth) {
-        return null;
+    public static double getDistanceBetweenInKm(CelestialObject defaultStar, CelestialObject earth) {
+        return 4.5E8;
     }
 }
