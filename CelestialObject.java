@@ -1,5 +1,6 @@
 public class CelestialObject {
     
+    public static final char[] KM_IN_ONE_AU = null;
     public double x = 0.0;      
     public double y = 0.0;
     public double z = 0.0;
@@ -46,5 +47,13 @@ public class CelestialObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static char[] getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
+        return null;
+    }
+
+    public static char[] getDistanceBetweenInKm(CelestialObject defaultStar, CelestialObject earth) {
+        return null;
     }
 }
