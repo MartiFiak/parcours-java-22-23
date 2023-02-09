@@ -8,7 +8,7 @@ public class Sort {
         if (list == null) {
             return null;
         }
-        List<Integer> l = new ArrayList<>(list);
+        List<Integer> result = new ArrayList<>(list);
         Collections.sort(result);
         return result;
     }
@@ -17,7 +17,7 @@ public class Sort {
         if (list == null) {
             return null;
         }
-        List<Integer> l = new ArrayList<>(list);
+        List<Integer> result = new ArrayList<>(list);
         Collections.sort(result, Collections.reverseOrder());
         return result;
     }
