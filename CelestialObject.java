@@ -1,42 +1,42 @@
 public class CelestialObject {
     
-    public static double x = 0.0;      
+    public double x = 0.0;      
 
-    public static double getX() {
+    public double y = 0.0;
+
+    public double z = 0.0;
+
+    public String name = null;
+
+    public double getX() {
         return x;
     }
 
-    public static void setX(double x) {
-        CelestialObject.x = x;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public static double y = 0.0;
-
-    public static double getY() {
+    public double getY() {
         return y;
     }
 
-    public static void setY(double y) {
-        CelestialObject.y = y;
+    public void setY(double y) {
+        this.y = y;
     }
 
-    public static double z = 0.0;
-
-    public static double getZ() {
+    public double getZ() {
         return z;
     }
 
-    public static void setZ(double z) {
-        CelestialObject.z = z;
+    public void setZ(double z) {
+        this.z = z;
     }
 
-    public static String name = null;
-
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        CelestialObject.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 }
