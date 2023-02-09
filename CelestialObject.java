@@ -1,3 +1,5 @@
+import java.lang.invoke.ConstantBootstraps;
+
 public class CelestialObject {
     
     public static double KM_IN_ONE_AU = 1.5E8;
@@ -50,10 +52,10 @@ public class CelestialObject {
     }
 
     public static double getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
-        return 3.0;
+        return Math.sqrt(Math.pow(defaultStar.getX() - earth.getX(), 2) + Math.pow(defaultStar.getY() - earth.getY(), 2) + Math.pow(defaultStar.getZ() - earth.getZ(), 2));
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar, CelestialObject earth) {
-        return 4.5E8;
+        return getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
     }
 }
