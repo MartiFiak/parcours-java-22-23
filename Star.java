@@ -1,9 +1,10 @@
 public class Star extends CelestialObject {
+
     @Override
     public String toString() {
         return getName() + " shines at the " + String.format("%.3f", getMagnitude()) + " magnitude";
     }
-
+    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -13,7 +14,6 @@ public class Star extends CelestialObject {
         result = prime * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -27,20 +27,20 @@ public class Star extends CelestialObject {
             return false;
         return true;
     }
+
     private double magnitude;
 
     public void setMagnitude(double magnitude) {
         this.magnitude = magnitude;
     }
-
     public double getMagnitude() {
         return magnitude;
     }
+
     public Star(String name, double x, double y, double z, double magnitude) {
         super(name, x, y, z);
         this.magnitude = magnitude;
     }
-
     public Star() {
     }
 }
