@@ -16,11 +16,11 @@ public class Character {
     }
 
 
-    public void takeDamage(int i) {
-        if (i > currentHealth) {
+    public void takeDamage(int damage) {
+        if (damage > currentHealth) {
             currentHealth = 0;
         } else {
-            currentHealth -= i;
+            currentHealth -= damage;
         }
     }
     public void attack(Character uruk) {
