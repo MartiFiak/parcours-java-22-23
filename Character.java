@@ -43,7 +43,7 @@ public class Character {
 
     public static String printStatus() {
         String status ="------------------------------------------\n" +
-        "Characters currently fighting : \n";
+        "Characters currently fighting :  \n";
         
         if (allCharacters.size() == 0) {
             status = "------------------------------------------\n" +
