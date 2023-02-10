@@ -1,8 +1,8 @@
 public class Character {
 
-    private int maxHealth;
+    private final int maxHealth;
     public int currentHealth;
-    private String name;
+    private final String name;
 
 
     public int getMaxHealth() {
@@ -22,6 +22,7 @@ public class Character {
         } else {
             currentHealth -= damage;
         }
+
     }
     public void attack(Character uruk) {
         uruk.takeDamage(9);
