@@ -1,7 +1,7 @@
 public class Character {
 
     private final int maxHealth;
-    public int currentHealth;
+    private int currentHealth;
     private final String name;
 
 
