@@ -48,7 +48,7 @@ public class Character {
         if (allCharacters.size() == 0) {
             status = "------------------------------------------\n" +
                     "Nobody's fighting right now !\n" +
-                    "------------------------------------------\n";
+                    "------------------------------------------";
         } else {
             
             for (Character character : allCharacters) {
