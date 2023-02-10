@@ -17,7 +17,7 @@ public class Character {
 
 
     public void takeDamage(int i) {
-        currentHealth -= i;
+        this.currentHealth -= i;
     }
     public void attack(Character uruk) {
         uruk.takeDamage(9);
