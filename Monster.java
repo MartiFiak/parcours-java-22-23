@@ -17,7 +17,7 @@ public class Monster extends Character {
         if (damage > currentHealth) {
             currentHealth = 0;
         } else {
-            currentHealth = (damage * (80/100));
+            this.currentHealth -=  Math.floor(damage * (80 / 100));
         }
         
     }
