@@ -1,15 +1,15 @@
 public class Monster extends Character {
 
-    public Monster(String name, int maxHealth) {
-        super(name, maxHealth);
+    public Monster(String name, int maxHealth, Weapon weapon) {
+        super(name, maxHealth, weapon);
     }
 
     @Override
     public String toString() {
         if (getCurrentHealth() <= 0) {
-            return getName() + " is a monster and is dead";
+            return getName() + " is a monster and is dead." + " He has the weapon " + weapon.toString() + ".";
         }
-    return getName() + " is a monster with " + getCurrentHealth() + " HP";
+    return getName() + " is a monster with " + getCurrentHealth() + " HP." + " He has the weapon " + weapon.toString() + ".";
     }
 
     @Override
@@ -24,7 +24,10 @@ public class Monster extends Character {
 
     @Override
     public void attack(Character uruk) {
-        uruk.takeDamage(7);
-        
+        if (this.getWeapon() == null){
+            uruk.takeDamage(7); 
+        } else {
+            uruk.takeDamage(this.getWeapon().getDamage());
+        }        
     }
 }

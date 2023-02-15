@@ -5,8 +5,18 @@ public abstract class Character {
 
     private final int maxHealth;
     protected int currentHealth;
+    protected Weapon weapon;
+
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
     
-    
+  
     protected void setCurrentHealth(int currentHealth) {
         this.currentHealth = currentHealth;
     }
@@ -31,11 +41,12 @@ public abstract class Character {
     public abstract void attack(Character uruk);
 
 
-    public Character(String name, int maxHealth) {
+    public Character(String name, int maxHealth, Weapon weapon) {
         this.maxHealth = maxHealth;
         this.name = name;
         this.currentHealth = maxHealth;
         this.allCharacters.add(this);
+        this.weapon = weapon;
     }
 
 
