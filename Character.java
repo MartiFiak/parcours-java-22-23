@@ -5,7 +5,7 @@ public abstract class Character {
 
     private final int maxHealth;
     protected int currentHealth;
-    protected Weapon weapon;
+    private Weapon weapon;
 
 
     public Weapon getWeapon() {

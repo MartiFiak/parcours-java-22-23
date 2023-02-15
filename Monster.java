@@ -6,10 +6,18 @@ public class Monster extends Character {
 
     @Override
     public String toString() {
+        String retour;
         if (getCurrentHealth() <= 0) {
-            return getName() + " is a monster and is dead." + " He has the weapon " + weapon.toString() + ".";
+            retour = getName() + " is a monster and is dead." + " He has the weapon ";
+        } else {
+            retour = getName() + " is a monster with " + getCurrentHealth() + " HP." + " He has the weapon ";
         }
-    return getName() + " is a monster with " + getCurrentHealth() + " HP." + " He has the weapon " + weapon.toString() + ".";
+        if (this.getWeapon() != null) {
+            retour += " He has no weapon " + this.getWeapon().toString() + ".";
+        } else {
+            retour += " He has the weapon ";
+        }
+        return retour;
     }
 
     @Override

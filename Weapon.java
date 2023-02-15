@@ -1,6 +1,6 @@
 public class Weapon {
 
-    public String name;
+    private String name;
     public int damage;
 
 
