@@ -7,7 +7,7 @@ public class Character {
     private int currentHealth;
     
     
-    public void setCurrentHealth(int currentHealth) {
+    protected void setCurrentHealth(int currentHealth) {
         this.currentHealth = currentHealth;
     }
 
@@ -97,4 +97,5 @@ public class Character {
         return getName() + " : " + getCurrentHealth() + "/" + getMaxHealth();
         }
     }
+    
 }
