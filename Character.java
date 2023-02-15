@@ -4,7 +4,7 @@ import java.util.List;
 public class Character {
 
     private final int maxHealth;
-    private int currentHealth;
+    protected int currentHealth;
     
     
     protected void setCurrentHealth(int currentHealth) {
