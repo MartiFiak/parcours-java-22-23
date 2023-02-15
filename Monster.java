@@ -11,4 +11,20 @@ public class Monster extends Character {
         }
     return getName() + " is a monster with " + getCurrentHealth() + " HP";
     }
+
+    @Override
+    public void takeDamage(int damage) {
+        if (damage > currentHealth) {
+            currentHealth = 0;
+        } else {
+            currentHealth = (damage * (80/100));
+        }
+        
+    }
+
+    @Override
+    public void attack(Character uruk) {
+        uruk.takeDamage(7);
+        
+    }
 }

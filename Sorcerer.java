@@ -35,4 +35,23 @@ public class Sorcerer extends Character implements Healer {
         }
         return getName() + " is a sorcerer with " + getCurrentHealth() + " HP. It can heal " + getHealCapacity() + " HP.";
     }
+
+
+    @Override
+    public void takeDamage(int damage) {
+        if (damage > currentHealth) {
+            currentHealth = 0;
+        } else {
+            currentHealth -= damage;
+        }
+        
+    }
+
+
+    @Override
+    public void attack(Character uruk) {
+        this.heal(this);
+        uruk.takeDamage(10);
+    }
+        
 }
