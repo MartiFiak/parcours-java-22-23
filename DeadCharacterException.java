@@ -18,6 +18,6 @@ public class DeadCharacterException extends Exception {
         else if (character instanceof Templar) {
             className += "templar";
         }
-        return "The " + className + " " + character.getName() + " is dead";
+        return "The " + className + " " + character.getName() + " is dead .";
     }
 }
