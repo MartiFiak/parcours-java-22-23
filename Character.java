@@ -5,6 +5,13 @@ public class Character {
 
     private final int maxHealth;
     private int currentHealth;
+    
+    
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
+    }
+
+
     private final String name;
     private static List <Character>allCharacters = new ArrayList<>();
 
