@@ -46,18 +46,22 @@ public class Sorcerer extends Character implements Healer {
 
 
     @Override
-    public void takeDamage(int damage) {
-        if (damage > currentHealth) {
-            currentHealth = 0;
-        } else {
+    public void takeDamage(int damage) throws DeadCharacterException {
+        if (this.currentHealth == 0) {
+            throw new DeadCharacterException(this);
+        }
+        if (getCurrentHealth() >= damage) {
+            currentHealth = getCurrentHealth();
             currentHealth -= damage;
+        } else {
+            currentHealth = 0;
         }
         
     }
 
 
     @Override
-    public void attack(Character uruk) {
+    public void attack(Character uruk) throws DeadCharacterException {
         this.heal(this);
         if (this.getWeapon() == null){
             uruk.takeDamage(10); 

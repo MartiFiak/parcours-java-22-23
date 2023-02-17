@@ -21,17 +21,21 @@ public class Monster extends Character {
     }
 
     @Override
-    public void takeDamage(int damage) {
+    public void takeDamage(int damage) throws DeadCharacterException {
         if (damage > currentHealth) {
             currentHealth = 0;
-        } else {
+        } 
+        if (this.currentHealth == 0) {
+            throw new DeadCharacterException(this);
+        }
+        else {
             this.currentHealth -=  Math.floor(damage * 0.8);
         }
         
     }
 
     @Override
-    public void attack(Character uruk) {
+    public void attack(Character uruk) throws DeadCharacterException {
         if (this.getWeapon() == null){
             uruk.takeDamage(7); 
         } else {
