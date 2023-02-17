@@ -68,9 +68,19 @@ public class Sorcerer extends Character implements Healer {
     public void attack(Character uruk) {
         this.heal(this);
         if (this.getWeapon() == null){
-            uruk.takeDamage(10); 
+            try {
+                uruk.takeDamage(10);
+            } catch (DeadCharacterException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } 
         } else {
-            uruk.takeDamage(this.getWeapon().getDamage());
+            try {
+                uruk.takeDamage(this.getWeapon().getDamage());
+            } catch (DeadCharacterException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         
     }
