@@ -21,12 +21,16 @@ public class Monster extends Character {
     }
 
     @Override
-    public void takeDamage(int damage) throws DeadCharacterException {
+    public void takeDamage(int damage) {
         if (damage > currentHealth) {
             currentHealth = 0;
         } 
         if (this.currentHealth == 0) {
-            throw new DeadCharacterException(this);
+            try {
+                throw new DeadCharacterException(this);
+            } catch (DeadCharacterException e) {
+                e.printStackTrace();
+            }
         }
         else {
             this.currentHealth -=  Math.floor(damage * 0.8);
@@ -35,7 +39,7 @@ public class Monster extends Character {
     }
 
     @Override
-    public void attack(Character uruk) throws DeadCharacterException {
+    public void attack(Character uruk) {
         if (this.getWeapon() == null){
             uruk.takeDamage(7); 
         } else {

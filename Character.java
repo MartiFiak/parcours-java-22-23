@@ -37,8 +37,8 @@ public abstract class Character {
     }
 
 
-    public abstract void takeDamage(int damage) throws DeadCharacterException;
-    public abstract void attack(Character uruk) throws DeadCharacterException;
+    public abstract void takeDamage(int damage);
+    public abstract void attack(Character uruk);
 
 
     public Character(String name, int maxHealth, Weapon weapon) {
@@ -75,18 +75,10 @@ public abstract class Character {
         int round = 1;
         while (player1.getCurrentHealth() > 0 && player2.getCurrentHealth() > 0) {
             if (round == 1){
-            try {
-                player1.attack(player2);
-            } catch (DeadCharacterException e) {
-                e.printStackTrace();
-            }
+            player1.attack(player2);
             round = 2;
             } else {
-                try {
-                    player2.attack(player1);
-                } catch (DeadCharacterException e) {
-                    e.printStackTrace();
-                }
+                player2.attack(player1);
                 round = 1;
             }
         }
