@@ -70,15 +70,23 @@ public abstract class Character {
     }
 
 
-    public static Character fight(Character player1, Character player2) throws DeadCharacterException {
+    public static Character fight(Character player1, Character player2) {
         Character winner;
         int round = 1;
         while (player1.getCurrentHealth() > 0 && player2.getCurrentHealth() > 0) {
             if (round == 1){
-            player1.attack(player2);
+            try {
+                player1.attack(player2);
+            } catch (DeadCharacterException e) {
+                e.printStackTrace();
+            }
             round = 2;
             } else {
-                player2.attack(player1);
+                try {
+                    player2.attack(player1);
+                } catch (DeadCharacterException e) {
+                    e.printStackTrace();
+                }
                 round = 1;
             }
         }
