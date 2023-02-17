@@ -41,17 +41,9 @@ public class Monster extends Character {
     @Override
     public void attack(Character uruk) {
         if (this.getWeapon() == null){
-            try {
-                uruk.takeDamage(7);
-            } catch (DeadCharacterException e) {
-                e.printStackTrace();
-            } 
+            uruk.takeDamage(7); 
         } else {
-            try {
-                uruk.takeDamage(this.getWeapon().getDamage());
-            } catch (DeadCharacterException e) {
-                e.printStackTrace();
-            }
+            uruk.takeDamage(this.getWeapon().getDamage());
         }        
     }
 }
